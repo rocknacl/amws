@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductAsinCategoryData" table="product_asin_category_data" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="generalResponseRecord" class="dao.entities.GeneralResponseRecord" fetch="select">
+            <column name="Request_ID" length="45" />
+        </many-to-one>
+        <many-to-one name="productCategories" class="dao.entities.ProductCategories" fetch="select">
+            <column name="Categories" length="45" />
+        </many-to-one>
+        <property name="asin" type="string">
+            <column name="ASIN" length="45" />
+        </property>
+        <property name="tstamp" type="timestamp">
+            <column name="TStamp" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

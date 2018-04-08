@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.testConnectionOnCheckout">true</property>
+        <property name="hibernate.connection.autoReconnect">true</property>
+        <property name="hibernate.connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">stone</property>
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/amws</property>
+        <property name="hibernate.connection.useSSL">false</property>
+        <property name="hibernate.connection.useUnicode">true</property>
+        <property name="hibernate.connection.username">stone</property>
+        <property name="hibernate.connection.verifyServerCertificate">false</property>
+        <property name="hibernate.connection.zeroDateTimeBehavior">convertToNull</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="dao/entities/ReportInventory.hbm.xml" />
+        <mapping resource="dao/entities/GeneralResponseRecord.hbm.xml" />
+        <mapping resource="dao/entities/MerchantAccount.hbm.xml" />
+        <mapping resource="dao/entities/ReportDailyTaskTemplate.hbm.xml" />
+        <mapping resource="dao/entities/ReportAdsBidByKeyword.hbm.xml" />
+        <mapping resource="dao/entities/ProductCompetitiveLowestPricedOffersData.hbm.xml" />
+        <mapping resource="dao/entities/ProductCompetitivePrice.hbm.xml" />
+        <mapping resource="dao/entities/ReportAdsAutoTargeting.hbm.xml" />
+        <mapping resource="dao/entities/ReportFeedback.hbm.xml" />
+        <mapping resource="dao/entities/ReportGetReportTask.hbm.xml" />
+        <mapping resource="dao/entities/ReportCancelledListings.hbm.xml" />
+        <mapping resource="dao/entities/ReportAdsProductPerformanceDaily.hbm.xml" />
+        <mapping resource="dao/entities/ReportRequestedOrScheduledFlatFileOrder.hbm.xml" />
+        <mapping resource="dao/entities/MerchantInboundAddress.hbm.xml" />
+        <mapping resource="dao/entities/ReportAdsOtherAsinWeekly.hbm.xml" />
+        <mapping resource="dao/entities/ReportUnshippedOrders.hbm.xml" />
+        <mapping resource="dao/entities/ProductLowestPricedOffersData.hbm.xml" />
+        <mapping resource="dao/entities/ProductAsinCategoryData.hbm.xml" />
+        <mapping resource="dao/entities/ProductSalesRank.hbm.xml" />
+        <mapping resource="dao/entities/ReportFbaAmazonFulfilledInventory.hbm.xml" />
+        <mapping resource="dao/entities/ProductOfferListing.hbm.xml" />
+        <mapping resource="dao/entities/ReportScheduledReport.hbm.xml" />
+        <mapping resource="dao/entities/ProductOfferCountData.hbm.xml" />
+        <mapping resource="dao/entities/ReportFbaInventoryHealth.hbm.xml" />
+        <mapping resource="dao/entities/GeneralExceptionRecord.hbm.xml" />
+        <mapping resource="dao/entities/ReportScheduledReportType.hbm.xml" />
+        <mapping resource="dao/entities/ReportAdsPerformanceByPlacement.hbm.xml" />
+        <mapping resource="dao/entities/ProductOfferDetailData.hbm.xml" />
+        <mapping resource="dao/entities/ProductOfferPriceData.hbm.xml" />
+        <mapping resource="dao/entities/ProductCompetitivePricingData.hbm.xml" />
+        <mapping resource="dao/entities/MerchantMfnAddress.hbm.xml" />
+        <mapping resource="dao/entities/ReportFbaAmazonFulfilledShipments.hbm.xml" />
+        <mapping resource="dao/entities/ReportActiveListings.hbm.xml" />
+        <mapping resource="dao/entities/ProductCategories.hbm.xml" />
+        <mapping resource="dao/entities/ReportAdsMega.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportGetReportTask" table="report_get_report_task" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="merchant" type="string">
+            <column name="merchant" length="45" />
+        </property>
+        <property name="workDate" type="timestamp">
+            <column name="work_date" length="19" />
+        </property>
+        <property name="reportType" type="string">
+            <column name="report_type" length="45" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <property name="reportProcessingStatus" type="string">
+            <column name="report_processing_status" length="45" />
+        </property>
+        <property name="fromDate" type="timestamp">
+            <column name="from_date" length="19" />
+        </property>
+        <property name="toDate" type="timestamp">
+            <column name="to_date" length="19" />
+        </property>
+        <property name="outputPath" type="string">
+            <column name="output_path" length="200" />
+        </property>
+        <property name="reportRequestId" type="string">
+            <column name="report_request_id" length="45" />
+        </property>
+        <property name="reportId" type="string">
+            <column name="report_id" length="45" />
+        </property>
+        <property name="lastUpdateDatetime" type="timestamp">
+            <column name="last_update_datetime" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

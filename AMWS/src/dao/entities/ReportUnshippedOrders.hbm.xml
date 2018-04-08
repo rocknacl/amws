@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportUnshippedOrders" table="report_unshipped_orders" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="orderId" type="string">
+            <column name="order_id" length="45" />
+        </property>
+        <property name="orderItemId" type="string">
+            <column name="order_item_id" length="45" />
+        </property>
+        <property name="purchaseDate" type="timestamp">
+            <column name="purchase_date" length="19" />
+        </property>
+        <property name="paymentsDate" type="timestamp">
+            <column name="payments_date" length="19" />
+        </property>
+        <property name="reportingDate" type="timestamp">
+            <column name="reporting_date" length="19" />
+        </property>
+        <property name="promiseDate" type="timestamp">
+            <column name="promise_date" length="19" />
+        </property>
+        <property name="daysPastPromise" type="java.lang.Integer">
+            <column name="days_past_promise" />
+        </property>
+        <property name="buyerEmail" type="string">
+            <column name="buyer_email" length="45" />
+        </property>
+        <property name="buyerName" type="string">
+            <column name="buyer_name" length="45" />
+        </property>
+        <property name="buyerPhoneNumber" type="string">
+            <column name="buyer_phone_number" length="45" />
+        </property>
+        <property name="sku" type="string">
+            <column name="sku" length="45" />
+        </property>
+        <property name="productName" type="string">
+            <column name="product_name" length="500" />
+        </property>
+        <property name="quantityPurchased" type="java.lang.Integer">
+            <column name="quantity_purchased" />
+        </property>
+        <property name="quantityShipped" type="java.lang.Integer">
+            <column name="quantity_shipped" />
+        </property>
+        <property name="quantityToShip" type="java.lang.Integer">
+            <column name="quantity_to_ship" />
+        </property>
+        <property name="shipServiceLevel" type="string">
+            <column name="ship_service_level" length="45" />
+        </property>
+        <property name="recipientName" type="string">
+            <column name="recipient_name" length="200" />
+        </property>
+        <property name="shipAddress1" type="string">
+            <column name="ship_address_1" length="200" />
+        </property>
+        <property name="shipAddress2" type="string">
+            <column name="ship_address_2" length="200" />
+        </property>
+        <property name="shipAddress3" type="string">
+            <column name="ship_address_3" length="200" />
+        </property>
+        <property name="shipCity" type="string">
+            <column name="ship_city" length="45" />
+        </property>
+        <property name="shipState" type="string">
+            <column name="ship_state" length="45" />
+        </property>
+        <property name="shipPostalCode" type="string">
+            <column name="ship_postal_code" length="45" />
+        </property>
+        <property name="shipCountry" type="string">
+            <column name="ship_country" length="45" />
+        </property>
+        <property name="isBusinessOrder" type="string">
+            <column name="is_business_order" length="45" />
+        </property>
+        <property name="purchaseOrderNumber" type="string">
+            <column name="purchase_order_number" length="100" />
+        </property>
+        <property name="priceDesignation" type="string">
+            <column name="price_designation" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

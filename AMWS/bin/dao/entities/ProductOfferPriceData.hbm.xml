@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductOfferPriceData" table="product_offer_price_data" catalog="amws" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="productLowestPricedOffersData" class="dao.entities.ProductLowestPricedOffersData" fetch="select">
+            <column name="Data_ID" />
+        </many-to-one>
+        <property name="conditions" type="string">
+            <column name="Conditions" length="45" />
+        </property>
+        <property name="fulfillmentChannel" type="string">
+            <column name="FulfillmentChannel" length="45" />
+        </property>
+        <property name="landedPriceCurrency" type="string">
+            <column name="LandedPrice_Currency" length="45" />
+        </property>
+        <property name="landedPriceAmount" type="big_decimal">
+            <column name="LandedPrice_Amount" precision="10" />
+        </property>
+        <property name="listingPriceCurrency" type="string">
+            <column name="ListingPrice_Currency" length="45" />
+        </property>
+        <property name="listingPriceAmount" type="big_decimal">
+            <column name="ListingPrice_Amount" precision="10" />
+        </property>
+        <property name="shippingCurrency" type="string">
+            <column name="Shipping_Currency" length="45" />
+        </property>
+        <property name="shippingAmount" type="big_decimal">
+            <column name="Shipping_Amount" precision="10" />
+        </property>
+        <property name="isBuyBoxPrice" type="string">
+            <column name="IsBuyBoxPrice" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

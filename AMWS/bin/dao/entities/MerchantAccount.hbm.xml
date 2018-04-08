@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.MerchantAccount" table="merchant_account" catalog="amws" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="id" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="marketPlaceId" type="string">
+            <column name="market_place_id" length="45" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="45" unique="true" />
+        </property>
+        <property name="accessKey" type="string">
+            <column name="access_key" length="45" />
+        </property>
+        <property name="secretKey" type="string">
+            <column name="secret_key" length="45" />
+        </property>
+        <property name="authToken" type="string">
+            <column name="auth_token" length="45" />
+        </property>
+        <set name="merchantInboundAddresses" table="merchant_inbound_address" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="merchant_id" length="45" />
+            </key>
+            <one-to-many class="dao.entities.MerchantInboundAddress" />
+        </set>
+        <set name="merchantMfnAddresses" table="merchant_mfn_address" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="merchant_id" length="45" />
+            </key>
+            <one-to-many class="dao.entities.MerchantMfnAddress" />
+        </set>
+    </class>
+</hibernate-mapping>

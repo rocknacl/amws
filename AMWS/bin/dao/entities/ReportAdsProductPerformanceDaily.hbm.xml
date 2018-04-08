@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportAdsProductPerformanceDaily" table="report_ads_product_performance_daily" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19" />
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19" />
+        </property>
+        <property name="merchantName" type="string">
+            <column name="merchant_name" length="45" />
+        </property>
+        <property name="sku" type="string">
+            <column name="sku" length="45" />
+        </property>
+        <property name="clicks" type="java.lang.Integer">
+            <column name="clicks" />
+        </property>
+        <property name="impressions" type="java.lang.Integer">
+            <column name="impressions" />
+        </property>
+        <property name="ctr" type="string">
+            <column name="ctr" length="45" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="45" />
+        </property>
+        <property name="totalSpend" type="big_decimal">
+            <column name="total_spend" precision="10" />
+        </property>
+        <property name="avgCpc" type="string">
+            <column name="avg_cpc" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

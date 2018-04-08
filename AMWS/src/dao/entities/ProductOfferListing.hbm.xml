@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductOfferListing" table="product_offer_listing" catalog="amws" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="productCompetitivePricingData" class="dao.entities.ProductCompetitivePricingData" fetch="select">
+            <column name="Data_ID" />
+        </many-to-one>
+        <property name="buyingPriceLandedCurrency" type="string">
+            <column name="BuyingPrice_Landed_Currency" length="45" />
+        </property>
+        <property name="buyingPriceLandedAmount" type="big_decimal">
+            <column name="BuyingPrice_Landed_Amount" precision="10" />
+        </property>
+        <property name="buyingPriceListingCurrency" type="string">
+            <column name="BuyingPrice_Listing_Currency" length="45" />
+        </property>
+        <property name="buyingPriceListingAmount" type="big_decimal">
+            <column name="BuyingPrice_Listing_Amount" precision="10" />
+        </property>
+        <property name="buyingPriceShippingCurrency" type="string">
+            <column name="BuyingPrice_Shipping_Currency" length="45" />
+        </property>
+        <property name="buyingPriceShippingAmount" type="big_decimal">
+            <column name="BuyingPrice_Shipping_Amount" precision="10" />
+        </property>
+        <property name="fulfillmentChannel" type="string">
+            <column name="FulfillmentChannel" length="45" />
+        </property>
+        <property name="itemCondition" type="string">
+            <column name="ItemCondition" length="45" />
+        </property>
+        <property name="itemSubCondition" type="string">
+            <column name="ItemSubCondition" length="45" />
+        </property>
+        <property name="sellerId" type="string">
+            <column name="SellerId" length="45" />
+        </property>
+        <property name="sellerSku" type="string">
+            <column name="SellerSKU" length="45" />
+        </property>
+        <property name="regularPriceCurrency" type="string">
+            <column name="RegularPrice_Currency" length="45" />
+        </property>
+        <property name="regularPriceAmount" type="big_decimal">
+            <column name="RegularPrice_Amount" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductCompetitivePrice" table="product_competitive_price" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="productCompetitivePricingData" class="dao.entities.ProductCompetitivePricingData" fetch="select">
+            <column name="Data_ID" />
+        </many-to-one>
+        <property name="competitivePriceId" type="string">
+            <column name="CompetitivePriceId" length="45" />
+        </property>
+        <property name="conditions" type="string">
+            <column name="Conditions" length="45" />
+        </property>
+        <property name="subcondition" type="string">
+            <column name="Subcondition" length="45" />
+        </property>
+        <property name="priceLandedCurrency" type="string">
+            <column name="Price_Landed_Currency" length="45" />
+        </property>
+        <property name="priceLandedAmount" type="big_decimal">
+            <column name="Price_Landed_Amount" precision="10" />
+        </property>
+        <property name="priceListingCurrency" type="string">
+            <column name="Price_Listing_Currency" length="45" />
+        </property>
+        <property name="priceListingAmount" type="big_decimal">
+            <column name="Price_Listing_Amount" precision="10" />
+        </property>
+        <property name="priceShippingCurrency" type="string">
+            <column name="Price_Shipping_Currency" length="45" />
+        </property>
+        <property name="priceShippingAmount" type="big_decimal">
+            <column name="Price_Shipping_Amount" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

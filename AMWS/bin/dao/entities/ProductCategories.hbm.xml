@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductCategories" table="product_categories" catalog="amws" optimistic-lock="version">
+        <id name="productCategoryId" type="string">
+            <column name="ProductCategoryId" length="45" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="productCategories" class="dao.entities.ProductCategories" fetch="select">
+            <column name="Parent" length="45" />
+        </many-to-one>
+        <property name="productCategoryName" type="string">
+            <column name="ProductCategoryName" length="45" />
+        </property>
+        <set name="productCategorieses" table="product_categories" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Parent" length="45" />
+            </key>
+            <one-to-many class="dao.entities.ProductCategories" />
+        </set>
+        <set name="productSalesRanks" table="product_sales_rank" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Categories" length="45" />
+            </key>
+            <one-to-many class="dao.entities.ProductSalesRank" />
+        </set>
+        <set name="productAsinCategoryDatas" table="product_asin_category_data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Categories" length="45" />
+            </key>
+            <one-to-many class="dao.entities.ProductAsinCategoryData" />
+        </set>
+    </class>
+</hibernate-mapping>

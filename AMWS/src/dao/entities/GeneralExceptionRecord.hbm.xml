@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.GeneralExceptionRecord" table="general_exception_record" catalog="amws" optimistic-lock="version">
+        <id name="exceptionId" type="string">
+            <column name="Exception_ID" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="exceptionMessage" type="string">
+            <column name="Exception_Message" length="2000" />
+        </property>
+        <property name="firstExceptionClass" type="string">
+            <column name="FirstExceptionClass" length="1000" />
+        </property>
+        <property name="firstExceptionClassLine" type="java.lang.Integer">
+            <column name="FirstExceptionClassLine" />
+        </property>
+        <property name="tstamp" type="timestamp">
+            <column name="TStamp" length="19" />
+        </property>
+        <property name="merchant" type="string">
+            <column name="Merchant" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

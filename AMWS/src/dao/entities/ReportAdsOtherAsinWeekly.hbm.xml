@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportAdsOtherAsinWeekly" table="report_ads_other_asin_weekly" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="10" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="end_date" length="10" />
+        </property>
+        <property name="campaignName" type="string">
+            <column name="campaign_name" length="200" />
+        </property>
+        <property name="adGroupName" type="string">
+            <column name="ad_group_name" length="200" />
+        </property>
+        <property name="advertisedSku" type="string">
+            <column name="advertised_sku" length="45" />
+        </property>
+        <property name="advertisedAsin" type="string">
+            <column name="advertised_asin" length="45" />
+        </property>
+        <property name="keyword" type="string">
+            <column name="keyword" length="200" />
+        </property>
+        <property name="matchType" type="string">
+            <column name="match_type" length="45" />
+        </property>
+        <property name="otherAsin" type="string">
+            <column name="other_asin" length="45" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="45" />
+        </property>
+        <property name="oneMonthOtherAsinUnitsOrdered" type="java.lang.Integer">
+            <column name="one_month_other_asin_units_ordered" />
+        </property>
+        <property name="oneMonthOtherAsinUnitsOrderedProductSales" type="big_decimal">
+            <column name="one_month_other_asin_units_ordered_product_sales" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductOfferDetailData" table="product_offer_detail_data" catalog="amws" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="productLowestPricedOffersData" class="dao.entities.ProductLowestPricedOffersData" fetch="select">
+            <column name="Data_ID" />
+        </many-to-one>
+        <property name="subCondition" type="string">
+            <column name="SubCondition" length="45" />
+        </property>
+        <property name="sellerFeedbackRatingPositiveRate" type="java.lang.Float">
+            <column name="SellerFeedbackRating_PositiveRate" precision="12" scale="0" />
+        </property>
+        <property name="sellerFeedbackRatingCount" type="java.lang.Integer">
+            <column name="SellerFeedbackRating_Count" />
+        </property>
+        <property name="shippingTimeMinHours" type="java.lang.Integer">
+            <column name="ShippingTime_MinHours" />
+        </property>
+        <property name="shippingTimeMaxHours" type="java.lang.Integer">
+            <column name="ShippingTime_MaxHours" />
+        </property>
+        <property name="shippingTimeAvailableDate" type="timestamp">
+            <column name="ShippingTime_AvailableDate" length="19" />
+        </property>
+        <property name="shippingTimeAvailabilityType" type="string">
+            <column name="ShippingTime_AvailabilityType" length="45" />
+        </property>
+        <property name="listingPriceCurrency" type="string">
+            <column name="ListingPrice_Currency" length="45" />
+        </property>
+        <property name="listingPriceAmount" type="big_decimal">
+            <column name="ListingPrice_Amount" precision="10" />
+        </property>
+        <property name="shippingCurrency" type="string">
+            <column name="Shipping_Currency" length="45" />
+        </property>
+        <property name="shippingAmount" type="big_decimal">
+            <column name="Shipping_Amount" precision="10" />
+        </property>
+        <property name="shipsFromState" type="string">
+            <column name="ShipsFrom_State" length="45" />
+        </property>
+        <property name="shipsFromCountry" type="string">
+            <column name="ShipsFrom_Country" length="45" />
+        </property>
+        <property name="isFulfilledByAmazon" type="string">
+            <column name="IsFulfilledByAmazon" length="45" />
+        </property>
+        <property name="isBuyBoxWinner" type="string">
+            <column name="IsBuyBoxWinner" length="45" />
+        </property>
+        <property name="isFeaturedMerchant" type="string">
+            <column name="IsFeaturedMerchant" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.GeneralResponseRecord" table="general_response_record" catalog="amws" optimistic-lock="version">
+        <id name="requestId" type="string">
+            <column name="Request_ID" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="tstamp" type="string">
+            <column name="TStamp" length="45" />
+        </property>
+        <property name="recordDate" type="timestamp">
+            <column name="RecordDate" length="19" />
+        </property>
+        <property name="className" type="string">
+            <column name="Class_Name" length="45" />
+        </property>
+        <property name="firstContent" type="string">
+            <column name="First_Content" length="500" />
+        </property>
+        <property name="merchant" type="string">
+            <column name="Merchant" length="45" />
+        </property>
+        <set name="productAsinCategoryDatas" table="product_asin_category_data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Request_ID" length="45" />
+            </key>
+            <one-to-many class="dao.entities.ProductAsinCategoryData" />
+        </set>
+        <set name="productLowestPricedOffersDatas" table="product_lowest_priced_offers_data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Request_ID" length="45" />
+            </key>
+            <one-to-many class="dao.entities.ProductLowestPricedOffersData" />
+        </set>
+    </class>
+</hibernate-mapping>

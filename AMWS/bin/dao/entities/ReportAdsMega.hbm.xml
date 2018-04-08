@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportAdsMega" table="report_ads_mega" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="campaignName" type="string">
+            <column name="campaign_name" length="100" />
+        </property>
+        <property name="adGroupName" type="string">
+            <column name="ad_group_name" length="200" />
+        </property>
+        <property name="advertisedSku" type="string">
+            <column name="advertised_sku" length="45" />
+        </property>
+        <property name="keyword" type="string">
+            <column name="keyword" length="200" />
+        </property>
+        <property name="matchType" type="string">
+            <column name="match_type" length="45" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="10" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="end_date" length="10" />
+        </property>
+        <property name="clicks" type="java.lang.Integer">
+            <column name="clicks" />
+        </property>
+        <property name="impressions" type="java.lang.Integer">
+            <column name="impressions" />
+        </property>
+        <property name="ctr" type="string">
+            <column name="ctr" length="45" />
+        </property>
+        <property name="totalSpend" type="big_decimal">
+            <column name="total_spend" precision="10" />
+        </property>
+        <property name="averageCpc" type="string">
+            <column name="average_cpc" length="45" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="45" />
+        </property>
+        <property name="oneDayOrdersPlaced" type="java.lang.Integer">
+            <column name="one_day_orders_placed" />
+        </property>
+        <property name="oneDayOrderedProductSales" type="big_decimal">
+            <column name="one_day_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneDayConversionRate" type="string">
+            <column name="one_day_conversion_rate" length="45" />
+        </property>
+        <property name="oneDaySameSkuUnitsOrdered" type="java.lang.Integer">
+            <column name="one_day_same_sku_units_ordered" />
+        </property>
+        <property name="oneDayOtherSkuUnitsOrdered" type="java.lang.Integer">
+            <column name="one_day_other_sku_units_ordered" />
+        </property>
+        <property name="oneDaySameSkuUnitsOrderedProductSales" type="big_decimal">
+            <column name="one_day_same_sku_units_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneDayOtherSkuUnitsOrderedProductSales" type="big_decimal">
+            <column name="one_day_other_sku_units_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneWeekOrdersPlaced" type="java.lang.Integer">
+            <column name="one_week_orders_placed" />
+        </property>
+        <property name="oneWeekOrderedProductSales" type="big_decimal">
+            <column name="one_week_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneWeekConversionRate" type="string">
+            <column name="one_week_conversion_rate" length="45" />
+        </property>
+        <property name="oneWeekSameSkuUnitsOrdered" type="java.lang.Integer">
+            <column name="one_week_same_sku_units_ordered" />
+        </property>
+        <property name="oneWeekOtherSkuUnitsOrdered" type="java.lang.Integer">
+            <column name="one_week_other_sku_units_ordered" />
+        </property>
+        <property name="oneWeekSameSkuUnitsOrderedProductSales" type="big_decimal">
+            <column name="one_week_same_sku_units_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneWeekOtherSkuUnitsOrderedProductSales" type="big_decimal">
+            <column name="one_week_other_sku_units_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneMonthOrdersPlaced" type="java.lang.Integer">
+            <column name="one_month_orders_placed" />
+        </property>
+        <property name="oneMonthOrderedProductSales" type="big_decimal">
+            <column name="one_month_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneMonthConversionRate" type="string">
+            <column name="one_month_conversion_rate" length="45" />
+        </property>
+        <property name="oneMonthSameSkuUnitsOrdered" type="java.lang.Integer">
+            <column name="one_month_same_sku_units_ordered" />
+        </property>
+        <property name="oneMonthOtherSkuUnitsOrdered" type="java.lang.Integer">
+            <column name="one_month_other_sku_units_ordered" />
+        </property>
+        <property name="oneMonthSameSkuUnitsOrderedProductSales" type="big_decimal">
+            <column name="one_month_same_sku_units_ordered_product_sales" precision="10" />
+        </property>
+        <property name="oneMonthOtherSkuUnitsOrderedProductSales" type="big_decimal">
+            <column name="one_month_other_sku_units_ordered_product_sales" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

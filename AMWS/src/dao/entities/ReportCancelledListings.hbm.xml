@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportCancelledListings" table="report_cancelled_listings" catalog="amws" optimistic-lock="version">
+        <id name="sellerSku" type="string">
+            <column name="seller_sku" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="itemName" type="string">
+            <column name="item_name" length="500" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="price" precision="10" />
+        </property>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="quantity" />
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="image_url" length="200" />
+        </property>
+        <property name="itemIsMarketplace" type="string">
+            <column name="item_is_marketplace" length="45" />
+        </property>
+        <property name="productIdType" type="string">
+            <column name="product_id_type" length="45" />
+        </property>
+        <property name="zshipShippingFee" type="big_decimal">
+            <column name="zship_shipping_fee" precision="10" />
+        </property>
+        <property name="itemNote" type="string">
+            <column name="item_note" length="500" />
+        </property>
+        <property name="itemCondition" type="string">
+            <column name="item_condition" length="45" />
+        </property>
+        <property name="zshopCategory1" type="string">
+            <column name="zshop_category1" length="45" />
+        </property>
+        <property name="zshopBrowsePath" type="string">
+            <column name="zshop_browse_path" length="45" />
+        </property>
+        <property name="zshopStorefrontFeature" type="string">
+            <column name="zshop_storefront_feature" length="45" />
+        </property>
+        <property name="asin1" type="string">
+            <column name="asin1" length="45" />
+        </property>
+        <property name="asin2" type="string">
+            <column name="asin2" length="45" />
+        </property>
+        <property name="asin3" type="string">
+            <column name="asin3" length="45" />
+        </property>
+        <property name="willShipInternationally" type="string">
+            <column name="will_ship_internationally" length="45" />
+        </property>
+        <property name="expeditedShipping" type="string">
+            <column name="expedited_shipping" length="45" />
+        </property>
+        <property name="zshipBoldface" type="string">
+            <column name="zship_boldface" length="45" />
+        </property>
+        <property name="productId" type="string">
+            <column name="product_id" length="45" />
+        </property>
+        <property name="addDelete" type="string">
+            <column name="add_delete" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

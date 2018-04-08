@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductCompetitivePricingData" table="product_competitive_pricing_data" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="status" type="string">
+            <column name="Status" length="45" />
+        </property>
+        <property name="asin" type="string">
+            <column name="ASIN" length="45" />
+        </property>
+        <property name="marketplaceId" type="string">
+            <column name="MarketplaceId" length="45" />
+        </property>
+        <property name="sellerSku" type="string">
+            <column name="Seller_SKU" length="45" />
+        </property>
+        <property name="sellerId" type="string">
+            <column name="Seller_ID" length="45" />
+        </property>
+        <property name="tstamp" type="timestamp">
+            <column name="TStamp" length="19" />
+        </property>
+        <set name="productCompetitivePrices" table="product_competitive_price" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Data_ID" />
+            </key>
+            <one-to-many class="dao.entities.ProductCompetitivePrice" />
+        </set>
+        <set name="productOfferListings" table="product_offer_listing" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Data_ID" />
+            </key>
+            <one-to-many class="dao.entities.ProductOfferListing" />
+        </set>
+        <set name="productCompetitiveLowestPricedOffersDatas" table="product_competitive_lowest_priced_offers_data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Data_ID" />
+            </key>
+            <one-to-many class="dao.entities.ProductCompetitiveLowestPricedOffersData" />
+        </set>
+        <set name="productSalesRanks" table="product_sales_rank" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Data_ID" />
+            </key>
+            <one-to-many class="dao.entities.ProductSalesRank" />
+        </set>
+    </class>
+</hibernate-mapping>

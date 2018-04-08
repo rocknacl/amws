@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductCompetitiveLowestPricedOffersData" table="product_competitive_lowest_priced_offers_data" catalog="amws" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="productCompetitivePricingData" class="dao.entities.ProductCompetitivePricingData" fetch="select">
+            <column name="Data_ID" />
+        </many-to-one>
+        <property name="multipleOffersAtLowestPrice" type="string">
+            <column name="MultipleOffersAtLowestPrice" length="45" />
+        </property>
+        <property name="sellerFeedbackCount" type="java.lang.Integer">
+            <column name="SellerFeedbackCount" />
+        </property>
+        <property name="numberOfOfferListingsConsidered" type="java.lang.Integer">
+            <column name="NumberOfOfferListingsConsidered" />
+        </property>
+        <property name="priceLandedCurrency" type="string">
+            <column name="Price_Landed_Currency" length="45" />
+        </property>
+        <property name="priceLandedAmount" type="big_decimal">
+            <column name="Price_Landed_Amount" precision="10" />
+        </property>
+        <property name="priceListingCurrency" type="string">
+            <column name="Price_Listing_Currency" length="45" />
+        </property>
+        <property name="priceListingAmount" type="big_decimal">
+            <column name="Price_Listing_Amount" precision="10" />
+        </property>
+        <property name="priceShippingCurrency" type="string">
+            <column name="Price_Shipping_Currency" length="45" />
+        </property>
+        <property name="priceShippingAmount" type="big_decimal">
+            <column name="Price_Shipping_Amount" precision="10" />
+        </property>
+        <property name="fulfillmentChannel" type="string">
+            <column name="FulfillmentChannel" length="45" />
+        </property>
+        <property name="itemCondition" type="string">
+            <column name="ItemCondition" length="45" />
+        </property>
+        <property name="itemSubcondition" type="string">
+            <column name="ItemSubcondition" length="45" />
+        </property>
+        <property name="sellerPositiveFeedbackRating" type="string">
+            <column name="SellerPositiveFeedbackRating" length="45" />
+        </property>
+        <property name="shipsDomestically" type="string">
+            <column name="ShipsDomestically" length="45" />
+        </property>
+        <property name="maxShippingTime" type="string">
+            <column name="MaxShippingTime" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

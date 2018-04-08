@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductOfferCountData" table="product_offer_count_data" catalog="amws" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="productLowestPricedOffersData" class="dao.entities.ProductLowestPricedOffersData" fetch="select">
+            <column name="Data_ID" />
+        </many-to-one>
+        <property name="conditions" type="string">
+            <column name="Conditions" length="45" />
+        </property>
+        <property name="fulfillmentChannel" type="string">
+            <column name="FulfillmentChannel" length="45" />
+        </property>
+        <property name="offerCount" type="java.lang.Integer">
+            <column name="OfferCount" />
+        </property>
+        <property name="buyBoxEligible" type="string">
+            <column name="BuyBoxEligible" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

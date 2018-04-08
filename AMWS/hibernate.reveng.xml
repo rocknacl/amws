@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="amws" match-name="merchant_account"/>
+  <table-filter match-catalog="amws" match-name="merchant_inbound_address"/>
+  <table-filter match-catalog="amws" match-name="merchant_mfn_address"/>
+  
+  <table-filter match-catalog="amws" match-name="recommendation_original_data"/>
+  
+  <table-filter match-catalog="amws" match-name="report_active_listings"/>
+  <table-filter match-catalog="amws" match-name="report_cancelled_listings"/>
+  <table-filter match-catalog="amws" match-name="report_afn_inventory"/>
+  <table-filter match-catalog="amws" match-name="report_fba_amazon_fulfilled_shipments"/>
+  <table-filter match-catalog="amws" match-name="report_fba_amazon_fulfilled_inventory"/>
+  <table-filter match-catalog="amws" match-name="report_feedback"/>
+  <table-filter match-catalog="amws" match-name="report_inventory"/>
+  <table-filter match-catalog="amws" match-name="report_requested_or_scheduled_flat_file_order"/>
+  <table-filter match-catalog="amws" match-name="report_fba_inventory_health"/>
+  <table-filter match-catalog="amws" match-name="report_unshipped_orders"/>
+  <table-filter match-catalog="amws" match-name="report_get_report_task"/>
+  <table-filter match-catalog="amws" match-name="report_scheduled_report"/>
+  <table-filter match-catalog="amws" match-name="report_daily_task_template"/>
+  <table-filter match-catalog="amws" match-name="report_scheduled_report_type"/>
+  
+  
+  <table-filter match-catalog="amws" match-name="report_ads_auto_targeting"/>
+  <table-filter match-catalog="amws" match-name="report_ads_bid_by_keyword"/>
+  <table-filter match-catalog="amws" match-name="report_ads_mega"/>
+  <table-filter match-catalog="amws" match-name="report_ads_other_asin_weekly"/>
+  <table-filter match-catalog="amws" match-name="report_ads_performance_by_placement"/>
+  <table-filter match-catalog="amws" match-name="report_ads_product_performance_daily"/>
+  
+  <table-filter match-catalog="amws" match-name="general_exception_record"/>
+  <table-filter match-catalog="amws" match-name="general_response_record"/>
+    
+  <table-filter match-catalog="amws" match-name="product_asin_category_data"/>
+  <table-filter match-catalog="amws" match-name="product_categories"/>
+  <table-filter match-catalog="amws" match-name="product_competitive_lowest_priced_offers_data"/>
+  <table-filter match-catalog="amws" match-name="product_competitive_price"/>
+  <table-filter match-catalog="amws" match-name="product_competitive_pricing_data"/>
+  <table-filter match-catalog="amws" match-name="product_lowest_priced_offers_data"/>
+  <table-filter match-catalog="amws" match-name="product_offer_count_data"/>
+  <table-filter match-catalog="amws" match-name="product_offer_detail_data"/>
+  <table-filter match-catalog="amws" match-name="product_offer_listing"/>
+  <table-filter match-catalog="amws" match-name="product_offer_price_data"/>
+  <table-filter match-catalog="amws" match-name="product_sales_rank"/>
+
+</hibernate-reverse-engineering>

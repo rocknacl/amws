@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportAdsPerformanceByPlacement" table="report_ads_performance_by_placement" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="campaign" type="string">
+            <column name="campaign" length="45" />
+        </property>
+        <property name="bid" type="string">
+            <column name="bid" length="45" />
+        </property>
+        <property name="placement" type="string">
+            <column name="placement" length="45" />
+        </property>
+        <property name="impressions" type="java.lang.Integer">
+            <column name="impressions" />
+        </property>
+        <property name="clicks" type="java.lang.Integer">
+            <column name="clicks" />
+        </property>
+        <property name="averageCpc" type="string">
+            <column name="average_cpc" length="45" />
+        </property>
+        <property name="totalSpend" type="big_decimal">
+            <column name="total_spend" precision="10" />
+        </property>
+        <property name="sales" type="big_decimal">
+            <column name="sales" precision="10" />
+        </property>
+        <property name="conversions" type="big_decimal">
+            <column name="conversions" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

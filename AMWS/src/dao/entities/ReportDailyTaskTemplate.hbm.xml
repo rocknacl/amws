@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportDailyTaskTemplate" table="report_daily_task_template" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="reportType" type="string">
+            <column name="report_type" length="45" />
+        </property>
+        <property name="distanceDays" type="java.lang.Integer">
+            <column name="distance_days" />
+        </property>
+        <property name="startDateSetRequired" type="java.lang.Integer">
+            <column name="start_date_set_required" />
+        </property>
+        <property name="endDateSetRequired" type="java.lang.Integer">
+            <column name="end_date_set_required" />
+        </property>
+        <property name="enabled" type="java.lang.Integer">
+            <column name="enabled" />
+        </property>
+    </class>
+</hibernate-mapping>

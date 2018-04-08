@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportAdsAutoTargeting" table="report_ads_auto_targeting" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="campaign" type="string">
+            <column name="campaign" length="200" />
+        </property>
+        <property name="adGroupName" type="string">
+            <column name="ad_group_name" length="200" />
+        </property>
+        <property name="customerSearchTerm" type="string">
+            <column name="customer_search_term" length="200" />
+        </property>
+        <property name="keyword" type="string">
+            <column name="keyword" length="500" />
+        </property>
+        <property name="matchType" type="string">
+            <column name="match_type" length="45" />
+        </property>
+        <property name="firstDayOfImpression" type="date">
+            <column name="first_day_of_impression" length="10" />
+        </property>
+        <property name="lastDayOfImpression" type="date">
+            <column name="last_day_of_impression" length="10" />
+        </property>
+        <property name="impressions" type="java.lang.Integer">
+            <column name="impressions" />
+        </property>
+        <property name="clicks" type="java.lang.Integer">
+            <column name="clicks" />
+        </property>
+        <property name="ctr" type="string">
+            <column name="ctr" length="45" />
+        </property>
+        <property name="totalSpend" type="big_decimal">
+            <column name="total_spend" precision="10" />
+        </property>
+        <property name="averageCpc" type="java.lang.Float">
+            <column name="average_cpc" precision="12" scale="0" />
+        </property>
+        <property name="acos" type="string">
+            <column name="acos" length="45" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="45" />
+        </property>
+        <property name="orderPlacedWithin1WeekOfAClick" type="java.lang.Integer">
+            <column name="order_placed_within_1_week_of_a_click" />
+        </property>
+        <property name="productSalesWithin1WeekOfAClick" type="big_decimal">
+            <column name="product_sales_within_1_week_of_a_click" precision="10" />
+        </property>
+        <property name="convertionRateWithin1WeekOfAClick" type="string">
+            <column name="convertion_rate_within_1_week_of_a_click" length="45" />
+        </property>
+        <property name="sameSkuUnitsOrderedWithin1WeekOfClick" type="java.lang.Integer">
+            <column name="same_sku_units_ordered_within_1_week_of_click" />
+        </property>
+        <property name="otherSkuUnitsOrderedWithin1WeekOfClick" type="java.lang.Integer">
+            <column name="other_sku_units_ordered_within_1_week_of_click" />
+        </property>
+        <property name="sameSkuUnitsProductSalesWithin1WeekOfClick" type="big_decimal">
+            <column name="same_sku_units_product_sales_within_1_week_of_click" precision="10" />
+        </property>
+        <property name="otherSkuUnitsProductSalesWithin1WeekOfClick" type="big_decimal">
+            <column name="other_sku_units_product_sales_within_1_week_of_click" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

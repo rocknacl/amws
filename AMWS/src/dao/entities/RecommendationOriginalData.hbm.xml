@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-7-21 12:38:36 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.RecommendationOriginalData" table="recommendation_original_data" catalog="amws" optimistic-lock="version">
+        <id name="recommendationId" type="string">
+            <column name="RecommendationId" length="1000" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="generalResponseRecord" class="dao.entities.GeneralResponseRecord" fetch="select">
+            <column name="RequestId" length="45" />
+        </many-to-one>
+        <property name="recommendationReason" type="string">
+            <column name="RecommendationReason" length="1000" />
+        </property>
+        <property name="lastUpdated" type="timestamp">
+            <column name="LastUpdated" length="19" />
+        </property>
+        <property name="itemIdentifierAsin" type="string">
+            <column name="ItemIdentifier_ASIN" length="45" />
+        </property>
+        <property name="itemIdentifierSku" type="string">
+            <column name="ItemIdentifier_SKU" length="45" />
+        </property>
+        <property name="itemIdentifierUpc" type="string">
+            <column name="ItemIdentifier_UPC" length="45" />
+        </property>
+        <property name="itemName" type="string">
+            <column name="ItemName" length="1000" />
+        </property>
+        <property name="brandName" type="string">
+            <column name="BrandName" length="45" />
+        </property>
+        <property name="productCategory" type="string">
+            <column name="ProductCategory" length="200" />
+        </property>
+        <property name="salesRank" type="java.lang.Integer">
+            <column name="SalesRank" />
+        </property>
+        <property name="buyboxPriceCurrency" type="string">
+            <column name="BuyboxPrice_Currency" length="45" />
+        </property>
+        <property name="buyboxPriceAmount" type="big_decimal">
+            <column name="BuyboxPrice_Amount" precision="10" />
+        </property>
+        <property name="numberOfOffers" type="java.lang.Integer">
+            <column name="NumberOfOffers" />
+        </property>
+        <property name="numberOfOffersFulfilledByAmazon" type="java.lang.Integer">
+            <column name="NumberOfOffersFulfilledByAmazon" />
+        </property>
+        <property name="averageCustomerReview" type="big_decimal">
+            <column name="AverageCustomerReview" precision="10" />
+        </property>
+        <property name="numberOfCustomerReviews" type="java.lang.Integer">
+            <column name="NumberOfCustomerReviews" />
+        </property>
+        <property name="itemDimensionsHeightValue" type="big_decimal">
+            <column name="ItemDimensions_Height_Value" precision="10" />
+        </property>
+        <property name="itemDimensionsHeightUnit" type="string">
+            <column name="ItemDimensions_Height_Unit" length="45" />
+        </property>
+        <property name="itemDimensionsWidthValue" type="big_decimal">
+            <column name="ItemDimensions_Width_Value" precision="10" />
+        </property>
+        <property name="itemDimensionsWidthUnit" type="string">
+            <column name="ItemDimensions_Width_Unit" length="45" />
+        </property>
+        <property name="itemDimensionsLengthValue" type="big_decimal">
+            <column name="ItemDimensions_Length_Value" precision="10" />
+        </property>
+        <property name="itemDimensionsLengthUnit" type="string">
+            <column name="ItemDimensions_Length_Unit" length="45" />
+        </property>
+        <property name="itemDimensionsWeightValue" type="big_decimal">
+            <column name="ItemDimensions_Weight_Value" precision="10" />
+        </property>
+        <property name="itemDimensionsWeightUnit" type="string">
+            <column name="ItemDimensions_Weight_Unit" length="45" />
+        </property>
+        <property name="fulfillmentChannel" type="string">
+            <column name="FulfillmentChannel" length="45" />
+        </property>
+        <property name="salesForTheLast30days" type="java.lang.Integer">
+            <column name="SalesForTheLast30Days" />
+        </property>
+        <property name="availableQuantity" type="java.lang.Integer">
+            <column name="AvailableQuantity" />
+        </property>
+        <property name="yourPricePlusShippingCurrency" type="string">
+            <column name="YourPricePlusShipping_Currency" length="45" />
+        </property>
+        <property name="yourPricePlusShippingAmount" type="big_decimal">
+            <column name="YourPricePlusShipping_Amount" precision="10" />
+        </property>
+        <property name="lowestPricePlusShippingCurrency" type="string">
+            <column name="LowestPricePlusShipping_Currency" length="45" />
+        </property>
+        <property name="lowestPricePlusShippingAmount" type="big_decimal">
+            <column name="LowestPricePlusShipping_Amount" precision="10" />
+        </property>
+        <property name="salesForTheLast14days" type="java.lang.Integer">
+            <column name="SalesForTheLast14Days" />
+        </property>
+        <property name="daysUntilStockRunsOut" type="java.lang.Integer">
+            <column name="DaysUntilStockRunsOut" />
+        </property>
+        <property name="inboundQuantity" type="java.lang.Integer">
+            <column name="InboundQuantity" />
+        </property>
+        <property name="recommendedInboundQuantity" type="java.lang.Integer">
+            <column name="RecommendedInboundQuantity" />
+        </property>
+        <property name="daysOutOfStockLast30days" type="java.lang.Integer">
+            <column name="DaysOutOfStockLast30Days" />
+        </property>
+        <property name="lostSalesInLast30days" type="java.lang.Integer">
+            <column name="LostSalesInLast30Days" />
+        </property>
+        <property name="defectGroup" type="string">
+            <column name="DefectGroup" length="100" />
+        </property>
+        <property name="defectAttribute" type="string">
+            <column name="DefectAttribute" length="45" />
+        </property>
+        <property name="qualitySet" type="string">
+            <column name="QualitySet" length="45" />
+        </property>
+        <property name="itemCondition" type="string">
+            <column name="Item_Condition" length="45" />
+        </property>
+        <property name="subCondition" type="string">
+            <column name="SubCondition" length="45" />
+        </property>
+        <property name="priceDifferenceToLowPriceCurrency" type="string">
+            <column name="PriceDifferenceToLowPrice_Currency" length="45" />
+        </property>
+        <property name="priceDifferenceToLowPriceAmount" type="big_decimal">
+            <column name="PriceDifferenceToLowPrice_Amount" precision="10" />
+        </property>
+        <property name="medianPricePlusShippingCurrency" type="string">
+            <column name="MedianPricePlusShipping_Currency" length="45" />
+        </property>
+        <property name="medianPricePlusShippingAmount" type="big_decimal">
+            <column name="MedianPricePlusShipping_Amount" precision="10" />
+        </property>
+        <property name="lowestMerchantFulfilledOfferPriceCurrency" type="string">
+            <column name="LowestMerchantFulfilledOfferPrice_Currency" length="45" />
+        </property>
+        <property name="lowestMerchantFulfilledOfferPriceAmount" type="big_decimal">
+            <column name="LowestMerchantFulfilledOfferPrice_Amount" precision="10" />
+        </property>
+        <property name="lowestAmazonFulfilledOfferPriceCurrency" type="string">
+            <column name="LowestAmazonFulfilledOfferPrice_Currency" length="45" />
+        </property>
+        <property name="lowestAmazonFulfilledOfferPriceAmount" type="big_decimal">
+            <column name="LowestAmazonFulfilledOfferPrice_Amount" precision="10" />
+        </property>
+        <property name="numberOfMerchantFulfilledOffers" type="java.lang.Integer">
+            <column name="NumberOfMerchantFulfilledOffers" />
+        </property>
+        <property name="numberOfAmazonFulfilledOffers" type="java.lang.Integer">
+            <column name="NumberOfAmazonFulfilledOffers" />
+        </property>
+        <property name="tstamp" type="string">
+            <column name="TStamp" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportFbaAmazonFulfilledShipments" table="report_fba_amazon_fulfilled_shipments" catalog="amws" optimistic-lock="version">
+        <composite-id name="id" class="dao.entities.ReportFbaAmazonFulfilledShipmentsId">
+            <key-property name="amazonOrderId" type="string">
+                <column name="amazon_order_id" length="45" />
+            </key-property>
+            <key-property name="shipmentId" type="string">
+                <column name="shipment_id" length="45" />
+            </key-property>
+            <key-property name="shipmentItemId" type="string">
+                <column name="shipment_item_id" length="45" />
+            </key-property>
+        </composite-id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="merchantOrderId" type="string">
+            <column name="merchant_order_id" length="45" />
+        </property>
+        <property name="amazonOrderItemId" type="string">
+            <column name="amazon_order_item_id" length="45" />
+        </property>
+        <property name="merchantOrderItemId" type="string">
+            <column name="merchant_order_item_id" length="45" />
+        </property>
+        <property name="purchaseDate" type="timestamp">
+            <column name="purchase_date" length="19" />
+        </property>
+        <property name="paymentsDate" type="timestamp">
+            <column name="payments_date" length="19" />
+        </property>
+        <property name="shipmentDate" type="timestamp">
+            <column name="shipment_date" length="19" />
+        </property>
+        <property name="reportingDate" type="timestamp">
+            <column name="reporting_date" length="19" />
+        </property>
+        <property name="buyerEmail" type="string">
+            <column name="buyer_email" length="200" />
+        </property>
+        <property name="buyerName" type="string">
+            <column name="buyer_name" length="200" />
+        </property>
+        <property name="buyerPhoneNumber" type="string">
+            <column name="buyer_phone_number" length="45" />
+        </property>
+        <property name="sku" type="string">
+            <column name="sku" length="45" />
+        </property>
+        <property name="productName" type="string">
+            <column name="product_name" length="1000" />
+        </property>
+        <property name="quantityShipped" type="java.lang.Integer">
+            <column name="quantity_shipped" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="45" />
+        </property>
+        <property name="itemPrice" type="big_decimal">
+            <column name="item_price" precision="10" />
+        </property>
+        <property name="itemTax" type="big_decimal">
+            <column name="item_tax" precision="10" />
+        </property>
+        <property name="shippingPrice" type="big_decimal">
+            <column name="shipping_price" precision="10" />
+        </property>
+        <property name="shippingTax" type="big_decimal">
+            <column name="shipping_tax" precision="10" />
+        </property>
+        <property name="giftWrapPrice" type="big_decimal">
+            <column name="gift_wrap_price" precision="10" />
+        </property>
+        <property name="giftWrapTax" type="big_decimal">
+            <column name="gift_wrap_tax" precision="10" />
+        </property>
+        <property name="shipServiceLevel" type="string">
+            <column name="ship_service_level" length="45" />
+        </property>
+        <property name="recipientName" type="string">
+            <column name="recipient_name" length="200" />
+        </property>
+        <property name="shipAddress1" type="string">
+            <column name="ship_address_1" length="100" />
+        </property>
+        <property name="shipAddress2" type="string">
+            <column name="ship_address_2" length="100" />
+        </property>
+        <property name="shipAddress3" type="string">
+            <column name="ship_address_3" length="100" />
+        </property>
+        <property name="shipCity" type="string">
+            <column name="ship_city" length="45" />
+        </property>
+        <property name="shipState" type="string">
+            <column name="ship_state" length="45" />
+        </property>
+        <property name="shipPostalCode" type="string">
+            <column name="ship_postal_code" length="45" />
+        </property>
+        <property name="shipCountry" type="string">
+            <column name="ship_country" length="45" />
+        </property>
+        <property name="itemPromotionDiscount" type="big_decimal">
+            <column name="item_promotion_discount" precision="10" />
+        </property>
+        <property name="shipPromotionDiscount" type="big_decimal">
+            <column name="ship_promotion_discount" precision="10" />
+        </property>
+        <property name="carrier" type="string">
+            <column name="carrier" length="45" />
+        </property>
+        <property name="trackingNumber" type="string">
+            <column name="tracking_number" length="45" />
+        </property>
+        <property name="estimatedArrivalDate" type="timestamp">
+            <column name="estimated_arrival_date" length="19" />
+        </property>
+        <property name="fulfillmentCenterId" type="string">
+            <column name="fulfillment_center_id" length="45" />
+        </property>
+        <property name="fulfillmentChannel" type="string">
+            <column name="fulfillment_channel" length="45" />
+        </property>
+        <property name="salesChannel" type="string">
+            <column name="sales_channel" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportActiveListings" table="report_active_listings" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="listingId" type="string">
+            <column name="Listing_ID" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="itemName" type="string">
+            <column name="Item_Name" length="500" />
+        </property>
+        <property name="itemDescription" type="string">
+            <column name="Item_Description" length="5000" />
+        </property>
+        <property name="sellerSku" type="string">
+            <column name="Seller_SKU" length="45" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="Price" precision="10" />
+        </property>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="Quantity" />
+        </property>
+        <property name="openDate" type="timestamp">
+            <column name="Open_Date" length="19" />
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="Image_URL" length="300" />
+        </property>
+        <property name="itemIsMarketplace" type="string">
+            <column name="Item_Is_Marketplace" length="45" />
+        </property>
+        <property name="productIdType" type="string">
+            <column name="Product_ID_Type" length="45" />
+        </property>
+        <property name="zshopShippingFee" type="string">
+            <column name="Zshop_Shipping_Fee" length="45" />
+        </property>
+        <property name="itemNote" type="string">
+            <column name="Item_Note" length="500" />
+        </property>
+        <property name="itemCondition" type="string">
+            <column name="Item_Condition" length="45" />
+        </property>
+        <property name="zshopCategory1" type="string">
+            <column name="Zshop_Category1" length="45" />
+        </property>
+        <property name="zshopBrowsePath" type="string">
+            <column name="Zshop_Browse_Path" length="45" />
+        </property>
+        <property name="zshopStorefrontFeature" type="string">
+            <column name="Zshop_Storefront_Feature" length="45" />
+        </property>
+        <property name="asin1" type="string">
+            <column name="Asin1" length="45" />
+        </property>
+        <property name="asin2" type="string">
+            <column name="Asin2" length="45" />
+        </property>
+        <property name="asin3" type="string">
+            <column name="Asin3" length="45" />
+        </property>
+        <property name="willShipInternationally" type="java.lang.Integer">
+            <column name="Will_Ship_internationally" />
+        </property>
+        <property name="expeditedShipping" type="string">
+            <column name="Expedited_Shipping" length="45" />
+        </property>
+        <property name="zshopBoldface" type="string">
+            <column name="Zshop_Boldface" length="45" />
+        </property>
+        <property name="productId" type="string">
+            <column name="Product_ID" length="45" />
+        </property>
+        <property name="bidForFeaturedPlacement" type="string">
+            <column name="Bid_For_Featured_Placement" length="45" />
+        </property>
+        <property name="addDelete" type="string">
+            <column name="Add_Delete" length="45" />
+        </property>
+        <property name="pendingQuantity" type="string">
+            <column name="Pending_Quantity" length="45" />
+        </property>
+        <property name="fulfillmentChannel" type="string">
+            <column name="Fulfillment_Channel" length="45" />
+        </property>
+        <property name="businessPrice" type="string">
+            <column name="Business_Price" length="45" />
+        </property>
+        <property name="quantityPriceType" type="string">
+            <column name="Quantity_Price_Type" length="45" />
+        </property>
+        <property name="quantityLowerBound1" type="big_decimal">
+            <column name="Quantity_Lower_Bound_1" precision="10" />
+        </property>
+        <property name="quantityPrice1" type="big_decimal">
+            <column name="Quantity_Price_1" precision="10" />
+        </property>
+        <property name="quantityLowerBound2" type="big_decimal">
+            <column name="Quantity_Lower_Bound_2" precision="10" />
+        </property>
+        <property name="quantityPrice2" type="big_decimal">
+            <column name="Quantity_Price_2" precision="10" />
+        </property>
+        <property name="quantityLowerBound3" type="big_decimal">
+            <column name="Quantity_Lower_Bound_3" precision="10" />
+        </property>
+        <property name="quantityPrice3" type="big_decimal">
+            <column name="Quantity_Price_3" precision="10" />
+        </property>
+        <property name="quantityLowerBound4" type="big_decimal">
+            <column name="Quantity_Lower_Bound_4" precision="10" />
+        </property>
+        <property name="quantityPrice4" type="big_decimal">
+            <column name="Quantity_Price_4" precision="10" />
+        </property>
+        <property name="quantityLowerBound5" type="big_decimal">
+            <column name="Quantity_Lower_Bound_5" precision="10" />
+        </property>
+        <property name="quantityPrice5" type="big_decimal">
+            <column name="Quantity_Price_5" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

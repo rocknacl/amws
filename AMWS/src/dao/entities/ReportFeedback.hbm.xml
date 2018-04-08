@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportFeedback" table="report_feedback" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="date" type="string">
+            <column name="date" length="45" />
+        </property>
+        <property name="rating" type="string">
+            <column name="rating" length="45" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="2000" />
+        </property>
+        <property name="yourResponse" type="string">
+            <column name="your_response" length="2000" />
+        </property>
+        <property name="arrivedOnTime" type="string">
+            <column name="arrived_on_time" length="45" />
+        </property>
+        <property name="itemAsDescribed" type="string">
+            <column name="item_as_described" length="45" />
+        </property>
+        <property name="customerService" type="string">
+            <column name="customer_service" length="45" />
+        </property>
+        <property name="orderId" type="string">
+            <column name="order_id" length="45" />
+        </property>
+        <property name="raterEmail" type="string">
+            <column name="rater_email" length="45" />
+        </property>
+        <property name="raterRole" type="string">
+            <column name="rater_role" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

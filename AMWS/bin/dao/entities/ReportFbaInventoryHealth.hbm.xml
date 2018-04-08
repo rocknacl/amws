@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ReportFbaInventoryHealth" table="report_fba_inventory_health" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="store" type="string">
+            <column name="Store" length="45" />
+        </property>
+        <property name="insertDate" type="timestamp">
+            <column name="Insert_Date" length="19" />
+        </property>
+        <property name="snapshotDate" type="timestamp">
+            <column name="snapshot_date" length="19" />
+        </property>
+        <property name="sku" type="string">
+            <column name="sku" length="45" />
+        </property>
+        <property name="fnsku" type="string">
+            <column name="fnsku" length="45" />
+        </property>
+        <property name="asin" type="string">
+            <column name="asin" length="45" />
+        </property>
+        <property name="productName" type="string">
+            <column name="product_name" length="10000" />
+        </property>
+        <property name="conditions" type="string">
+            <column name="conditions" length="45" />
+        </property>
+        <property name="salesRank" type="java.lang.Integer">
+            <column name="sales_rank" />
+        </property>
+        <property name="productGroup" type="string">
+            <column name="product_group" length="45" />
+        </property>
+        <property name="totalQuantity" type="java.lang.Integer">
+            <column name="total_quantity" />
+        </property>
+        <property name="sellableQuantity" type="java.lang.Integer">
+            <column name="sellable_quantity" />
+        </property>
+        <property name="unsellableQuantity" type="java.lang.Integer">
+            <column name="unsellable_quantity" />
+        </property>
+        <property name="invAge0To90Days" type="java.lang.Integer">
+            <column name="inv_age_0_to_90_days" />
+        </property>
+        <property name="invAge91To180Days" type="java.lang.Integer">
+            <column name="inv_age_91_to_180_days" />
+        </property>
+        <property name="invAge181To270Days" type="java.lang.Integer">
+            <column name="inv_age_181_to_270_days" />
+        </property>
+        <property name="invAge271To365Dats" type="java.lang.Integer">
+            <column name="inv_age_271_to_365_dats" />
+        </property>
+        <property name="invAge365PlusDays" type="java.lang.Integer">
+            <column name="inv_age_365_plus_days" />
+        </property>
+        <property name="unitsShippedLast24Hrs" type="java.lang.Integer">
+            <column name="units_shipped_last_24_hrs" />
+        </property>
+        <property name="unitsShippedLast7Days" type="java.lang.Integer">
+            <column name="units_shipped_last_7_days" />
+        </property>
+        <property name="unitsShippedLast30Days" type="java.lang.Integer">
+            <column name="units_shipped_last_30_days" />
+        </property>
+        <property name="unitsShippedLast90Days" type="java.lang.Integer">
+            <column name="units_shipped_last_90_days" />
+        </property>
+        <property name="unitsShippedLast180Days" type="java.lang.Integer">
+            <column name="units_shipped_last_180_days" />
+        </property>
+        <property name="unitsShippedLast365Days" type="java.lang.Integer">
+            <column name="units_shipped_last_365_days" />
+        </property>
+        <property name="weeksOfCoverT7" type="string">
+            <column name="weeks_of_cover_t7" length="45" />
+        </property>
+        <property name="weeksOfCoverT30" type="string">
+            <column name="weeks_of_cover_t30" length="45" />
+        </property>
+        <property name="weeksOfCoverT90" type="string">
+            <column name="weeks_of_cover_t90" length="45" />
+        </property>
+        <property name="weeksOfCoverT180" type="string">
+            <column name="weeks_of_cover_t180" length="45" />
+        </property>
+        <property name="weeksOfCoverT365" type="string">
+            <column name="weeks_of_cover_t365" length="45" />
+        </property>
+        <property name="numAfnNewSellers" type="java.lang.Integer">
+            <column name="num_afn_new_sellers" />
+        </property>
+        <property name="numAfnUsedSellers" type="java.lang.Integer">
+            <column name="num_afn_used_sellers" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="45" />
+        </property>
+        <property name="yourPrice" type="big_decimal">
+            <column name="your_price" precision="10" />
+        </property>
+        <property name="salesPrice" type="big_decimal">
+            <column name="sales_price" precision="10" />
+        </property>
+        <property name="lowestAfnNewPrice" type="big_decimal">
+            <column name="lowest_afn_new_price" precision="10" />
+        </property>
+        <property name="lowestAfnUsedPrice" type="big_decimal">
+            <column name="lowest_afn_used_price" precision="10" />
+        </property>
+        <property name="lowestMfnNewPrice" type="big_decimal">
+            <column name="lowest_mfn_new_price" precision="10" />
+        </property>
+        <property name="lowestMfnUsedPrice" type="big_decimal">
+            <column name="lowest_mfn_used_price" precision="10" />
+        </property>
+        <property name="qtyToBeChargedLtsf12Mo" type="java.lang.Integer">
+            <column name="qty_to_be_charged_ltsf_12_mo" />
+        </property>
+        <property name="qtyInLongTermStorageProgram" type="java.lang.Integer">
+            <column name="qty_in_long_term_storage_program" />
+        </property>
+        <property name="qtyWithRemovalsInProgress" type="java.lang.Integer">
+            <column name="qty_with_removals_in_progress" />
+        </property>
+        <property name="projectedLtsf12Mo" type="big_decimal">
+            <column name="projected_ltsf_12_mo" precision="10" />
+        </property>
+        <property name="perUnitVolumn" type="java.lang.Float">
+            <column name="per_unit_volumn" precision="12" scale="0" />
+        </property>
+        <property name="isHazmat" type="string">
+            <column name="is_hazmat" length="45" />
+        </property>
+        <property name="inBoundQuantity" type="java.lang.Integer">
+            <column name="in_bound_quantity" />
+        </property>
+        <property name="asinLimit" type="string">
+            <column name="asin_limit" length="45" />
+        </property>
+        <property name="inBoundRecommendQuantity" type="java.lang.Integer">
+            <column name="in_bound_recommend_quantity" />
+        </property>
+        <property name="qtyToBeChargedLtsf6Mo" type="java.lang.Integer">
+            <column name="qty_to_be_charged_ltsf_6_mo" />
+        </property>
+        <property name="projectedLtsf6Mo" type="big_decimal">
+            <column name="projected_ltsf_6_mo" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

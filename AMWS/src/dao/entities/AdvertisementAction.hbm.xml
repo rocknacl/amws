@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.AdvertisementAction" table="advertisement_action" catalog="amws" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="sellerCode" type="string">
+            <column name="seller_code" length="20" />
+        </property>
+        <property name="campaignName" type="string">
+            <column name="campaign_name" length="100" />
+        </property>
+        <property name="adGroupName" type="string">
+            <column name="ad_group_name" length="100" />
+        </property>
+        <property name="keyword" type="string">
+            <column name="keyword" length="100" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="10" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="end_date" length="10" />
+        </property>
+        <property name="proposedAction" type="string">
+            <column name="proposed_action" length="2000" />
+        </property>
+        <property name="realAction" type="string">
+            <column name="real_action" length="2000" />
+        </property>
+        <property name="result" type="string">
+            <column name="result" length="2000" />
+        </property>
+    </class>
+</hibernate-mapping>

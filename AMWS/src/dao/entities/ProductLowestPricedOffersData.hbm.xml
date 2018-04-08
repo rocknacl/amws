@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-8 16:52:32 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="dao.entities.ProductLowestPricedOffersData" table="product_lowest_priced_offers_data" catalog="amws" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="generalResponseRecord" class="dao.entities.GeneralResponseRecord" fetch="select">
+            <column name="Request_ID" length="45" />
+        </many-to-one>
+        <property name="marketplaceId" type="string">
+            <column name="MarketplaceID" length="45" />
+        </property>
+        <property name="asin" type="string">
+            <column name="Asin" length="45" />
+        </property>
+        <property name="itemCondition" type="string">
+            <column name="Item_Condition" length="45" />
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="45" />
+        </property>
+        <property name="tstamp" type="timestamp">
+            <column name="TStamp" length="19" />
+        </property>
+        <property name="lowestOfferMarketplaceId" type="string">
+            <column name="Lowest_Offer_MarketplaceId" length="45" />
+        </property>
+        <property name="lowestOfferAsin" type="string">
+            <column name="Lowest_Offer_Asin" length="45" />
+        </property>
+        <property name="lowestOfferItemCondition" type="string">
+            <column name="Lowest_Offer_ItemCondition" length="45" />
+        </property>
+        <property name="lowestOfferTimeOfOfferChange" type="timestamp">
+            <column name="Lowest_Offer_TimeOfOfferChange" length="19" />
+        </property>
+        <property name="listPriceCurrency" type="string">
+            <column name="List_Price_Currency" length="45" />
+        </property>
+        <property name="listPriceAmount" type="big_decimal">
+            <column name="List_Price_Amount" precision="10" />
+        </property>
+        <property name="suggestedLowerPricePlusShippingCurrency" type="string">
+            <column name="SuggestedLowerPricePlusShipping_Currency" length="45" />
+        </property>
+        <property name="suggestedLowerPricePlusShippingAmount" type="big_decimal">
+            <column name="SuggestedLowerPricePlusShipping_Amount" precision="10" />
+        </property>
+        <set name="productOfferCountDatas" table="product_offer_count_data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Data_ID" />
+            </key>
+            <one-to-many class="dao.entities.ProductOfferCountData" />
+        </set>
+        <set name="productOfferPriceDatas" table="product_offer_price_data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Data_ID" />
+            </key>
+            <one-to-many class="dao.entities.ProductOfferPriceData" />
+        </set>
+        <set name="productOfferDetailDatas" table="product_offer_detail_data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Data_ID" />
+            </key>
+            <one-to-many class="dao.entities.ProductOfferDetailData" />
+        </set>
+    </class>
+</hibernate-mapping>
